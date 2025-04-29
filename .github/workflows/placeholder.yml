@@ -1,0 +1,16 @@
+name: "placeholder"
+on:
+  push:
+    branches:
+      - master
+#    paths-ignore:
+#      - .github/**
+jobs:
+  placehold:
+    runs-on: ubuntu-latest
+    outputs:
+      message: ${{ steps.print_message.outputs.message }}
+    steps:
+      - name: store message
+        id: print_message
+        run: echo 'message="This is just holding place for future work flows :)"' > $GITHUB_OUTPUT
