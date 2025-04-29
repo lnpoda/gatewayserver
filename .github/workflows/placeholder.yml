@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: store message
         id: print_message
-        run: echo 'message="This is just holding place for future work flows :)"' > $GITHUB_OUTPUT
+        run: echo 'message="This is just holding place for future work flows.. "' > $GITHUB_OUTPUT
   print-message:
     runs-on: ubuntu-latest
     needs: store-message
