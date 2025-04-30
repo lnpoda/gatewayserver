@@ -5,13 +5,11 @@ inputs:
     description: "A message to be displayed"
     required: false
     default: "This is just holding place for future work flows.."
-outputs:
-  output-message: ${{ steps.print-message.outputs.message }}
+
 runs:
   using: "composite"
   steps:
     - name: "print message"
       id: print-id
-      run: |
-        echo "${inputs.message}"
-        echo "${inputs.message}" >> $GITHUB_OUTPUT
+      run: echo "${inputs.message}"
+      shell: bash
