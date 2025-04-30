@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: store-message
     steps:
+      - name: load code
+        uses: actions/checkout
       - name: print the message
         run: echo "${{ needs.store-message.outputs.message }}"
       - name: using custom action to print message
