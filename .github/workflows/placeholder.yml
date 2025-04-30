@@ -20,4 +20,5 @@ jobs:
     steps:
       - name: print the message
         run: echo "${{ needs.store-message.outputs.message }}"
+      - name: using custom action to print message
         uses: ./.github/actions/print-message
