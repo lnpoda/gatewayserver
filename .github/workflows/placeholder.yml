@@ -19,7 +19,7 @@ jobs:
     needs: store-message
     steps:
       - name: load code
-        uses: actions/checkout
+        uses: actions/checkout@v3
       - name: print the message
         run: echo "${{ needs.store-message.outputs.message }}"
       - name: using custom action to print message
